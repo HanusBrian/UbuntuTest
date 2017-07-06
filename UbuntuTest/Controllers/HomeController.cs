@@ -13,16 +13,16 @@ namespace UbuntuTest.Controllers
             return View();
         }
 
-        public IActionResult About()
+        public IActionResult Tools()
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Message"] = "Productivity Apps";
 
             return View();
         }
 
         public IActionResult Contact()
         {
-            ViewData["Message"] = "Your contact page.";
+            ViewData["Message"] = "A&A contact page";
 
             return View();
         }
