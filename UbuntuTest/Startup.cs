@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
+using UbuntuTest.Models;
 
 namespace UbuntuTest
 {
@@ -28,6 +30,8 @@ namespace UbuntuTest
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
+            services.AddDbContext<AADbContext>(options =>
+                options.UseSqlServer(Configuration["Data:AADb:ConnectionString"]));
             services.AddMvc();
         }
 
